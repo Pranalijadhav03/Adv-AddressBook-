@@ -22,3 +22,10 @@ Insert Into AddressBook1 Values('Pranali', 'Prakash', 'Jadhav', 'Mumbai', 'Mahar
 						('Rachit', 'Yeshwant', 'Kanavale', 'Andheri', 'Maharashtra', 822102, '9852741630', 'Rachit741@gmail.com');
 
 select * from AddressBook1
+
+------------------Edit Existing AddressBook Table Using Update (UC4)--------------
+Update AddressBook1 Set EmailId='Kanavale@yahoo.com' Where FirstName='Rachu';
+Update AddressBook1 Set Address='', City = 'Patna', StateName = 'Bihar' Where FirstName='Rakesh';
+Update AddressBook1 Set Phonenum='9856406754' Where FirstName='Rakesh';
+Update AddressBook1 Set LastName='kadam' Where FirstName='Nutan';
+select * from AddressBook1
