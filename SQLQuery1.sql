@@ -40,3 +40,6 @@ select * from AddressBook1
 
 --------------------------------Retrieve Person Record From Table By City Or State(UC6)---------------------------------------
 Select * From AddressBook1 Where City='Mumbai' Or StateName='Maharashtra'; 
+
+----------------------Ability To Get The Size Of AddressBook By City And State Using Count(UC7)---------------------------------
+Select Count(*) As Count,StateName, City From AddressBook1 Group By StateName,City;
