@@ -34,4 +34,9 @@ select * from AddressBook1
 Delete From AddressBook1 Where FirstName='Rakesh' And LastName = 'Sharma';
 select * from AddressBook1
 
+---------------------------------------Delete Existing Contact From Table(UC5)-----------------------------------------------
+Delete From AddressBook1 Where FirstName='Rakesh' And LastName = 'Sharma';
+select * from AddressBook1
 
+--------------------------------Retrieve Person Record From Table By City Or State(UC6)---------------------------------------
+Select * From AddressBook1 Where City='Mumbai' Or StateName='Maharashtra'; 
