@@ -46,3 +46,33 @@ Select Count(*) As Count,StateName, City From AddressBook1 Group By StateName,Ci
 
 --------------------------------------Retrive Sorted Persons Records By City(UC8)------------------------------------------------
 Select * From AddressBook1 Where City = 'Pune' Order By FirstName;
+
+
+-----------------------------------------------Add AddressBookName And Type Column(UC9)----------------------------------------------------------
+
+Create Table AddressBook2(
+	FirstName varchar(50) not null,
+	LastName varchar(50),
+	Address varchar(255),
+	City varchar(50),
+	StateName varchar(50),
+	ZipCode int,
+	PhoneNum varchar(10),
+	EmailId varchar(50)
+);
+
+Insert Into AddressBook2 Values('pushpa', 'Raj', 'Gandhinagar', 'Bengluru', 'Karnataka', 560045, '9823434561', 'abc012@gmail.com'),
+						('Mahesh', 'jadhav', 'Manglore', 'Bengluru', 'Karnataka', 560030, '7419632580', 'abc320@gmail.com'),	
+						('Ankita', 'khade', 'Noida', 'Delhi', 'NewDelhi', 965874, '7412589631', 'abc475@gmail.com'),	
+						('Rahul', 'Gandhi', 'Chandani', 'Delhi', 'NewDelhi', 965875, '9874561230', 'abc456@gmail.com'),	
+						('Bharat', 'Kumar', 'Yalanka', 'Bengluru', 'Karnataka', 560015, '7456981230', 'abc786@gmail.com');
+Select * From AddressBook2
+
+Alter Table AddressBook2 Add AddressBookName varchar(50), AddressBookType varchar(50);
+
+
+------------------Updating The DataBase With New Coulmn Values------------------
+
+Update AddressBook2 Set AddressBookName='FreindsAddressBook',AddressBookType='Freinds' Where FirstName ='Pushpa' Or FirstName='Rahul' Or FirstName = 'Mahesh';
+Update AddressBook2 Set AddressBookName='FamilyAddressBook',AddressBookType='Family' Where FirstName ='Ankita' Or FirstName='Bharat';
+Select * From AddressBook2 Order By FirstName;
